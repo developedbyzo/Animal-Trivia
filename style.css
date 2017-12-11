@@ -3,7 +3,10 @@ html, body {
   padding: 0;
 }
 body {
-  background: blue;
+  background: black;
+}
+nav a {
+  height: 500px;
 }
 div {
   float: left;
@@ -12,7 +15,7 @@ div {
   height: 759px;
   
 }
-.trivia {
+.container {
   background: white;
   height: 759px;
   width: 964px;
