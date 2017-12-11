@@ -1,1 +1,23 @@
-
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: blue;
+}
+div {
+  float: left;
+}
+.header1 {
+  height: 759px;
+  
+}
+.trivia {
+  background: white;
+  height: 759px;
+  width: 964px;
+}
+.header2 {
+  height: 759px;
+  
+}
