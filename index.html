@@ -19,9 +19,33 @@
       </div>
       <div id="background">
         <div class="container">
-          <div class="trivia"></div>
-          <input class="answers"/>
-          <div class="results"></div>
+            <form id="triviaForm">
+                <p id="firstQ">Where on a fish would you find its dorsal fin?</p> 
+                <ul>
+                  <li>Choose from the following:</li>
+                  <li>Stomach</li>
+                  <li>Head</li>
+                  <li>Back</li>
+                  <li>Tail</li>
+                </ul>
+                <input type="text" name="answer" id="Q1"/>
+                <br>
+                <p id="secondQ">Originating in northern China, this dog breed is known for its unique blue-black tongue and thick coat of fur.</p> 
+                <ul>
+                  <li>Choose from the following:</li>
+                  <li>Pekingese</li>
+                  <li>Shih Tzu</li>
+                  <li>Shar Pei</li>
+                  <li>Chow Chow</li>
+                </ul>
+                <input type="text" name="answer" id="Q2"/>
+                <br>
+                <input id="btnSubmit" type="button" value="submit"/>
+                <p><span id="score"></span> out of 10 correct answers!</p>
+                <!-- <div class="brush"></div> -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+                <script src="script.js"></script>
+              </form>
         </div>
       </div>
       <div>
