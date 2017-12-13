@@ -3,22 +3,34 @@ html, body {
   padding: 0;
 }
 body {
-  background: black;
+  background-image: url("http://www.mulierchile.com/animal-background-wallpaper/animal-background-wallpaper-014.jpg");
+  background-size: cover;
+  
 }
-nav a {
-  height: 500px;
+h1, h3, p {
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  color: white;
+}
+
+ul {
+  font-family: 'Nunito', sans-serif;
+  text-align: left;
+  color: white;
+  list-style: none;
 }
 div {
   float: left;
+  text-align: center;
 }
 .header1 {
   height: 759px;
   
 }
 .container {
-  background: white;
-  height: 759px;
-  width: 964px;
+  background-color: black;
+  height: auto;
+  width: 600px;
 }
 .header2 {
   height: 759px;

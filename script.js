@@ -42,9 +42,36 @@ reset.on('click', function () {
       alert('Please enter an answer.')
       return false
     }
-    if (score >= 2) {
+    let answer3 = $('#Q3').val()
+    if (answer3 === 'Scarlet Kingsnake') {
+      score += 1
+      // event.preventDefault()
+      console.log(score)
+    } else if (answer === '') {
+      alert('Please enter an answer.')
+      return false
+    }
+    let answer4 = $('#Q4').val()
+    if (answer4 === 'Clear') {
+      score += 1
+      // event.preventDefault()
+      console.log(score)
+    } else if (answer === '') {
+      alert('Please enter an answer.')
+      return false
+    }
+    let answer5 = $('#Q5').val()
+    if (answer5 === 'Dolphins') {
+      score += 1
+      // event.preventDefault()
+      console.log(score)
+    } else if (answer === '') {
+      alert('Please enter an answer.')
+      return false
+    }
+    if (score >= 5) {
       alert('You have ' + score + 'pts!')
-    } else if (score <= 4) {
+    } else if (score <= 2) {
       alert('You have ' + score + 'pts..Good Luck next time...')
     }
     let tally = $('#score')
