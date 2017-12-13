@@ -9,12 +9,23 @@ for (i = 0; i < score; i++) {
 const button = $('#btnSubmit')
 button.on('click', questionAns)
 
+const reset = $('#btnReset')
+reset.on('click', function () {
+  document.location.reload()
+})
+
+//Resets the form
+// function resetForm () {
+//   ('#triviaForm').reset()
+//   return true
+// }
+
 // function firstQ () {
   function questionAns () {
     let answer = $('#Q1').val()
     if (answer === 'Back') {
-      score = score + 1
-      event.preventDefault()
+      score += 1
+      // event.preventDefault()
       console.log(score)
     } else if (answer === '') {
       alert('Please enter an answer.')
@@ -24,26 +35,27 @@ button.on('click', questionAns)
 // function secondQ () {
     let answer2 = $('#Q2').val()
     if (answer2 === 'Chow Chow') {
-      score = score + 1
-      event.preventDefault()
+      score += 1
+      // event.preventDefault()
       console.log(score)
     } else if (answer === '') {
       alert('Please enter an answer.')
       return false
     }
-    $('#score').append(score)
-
-    function resetForm () {
-      $('#triviaForm').submit();
-      $('#triviaForm').reset();
-      return false;
-    }
     if (score >= 2) {
-    alert('You got ' + score + '/10 correct!')
-  } else if (score <= 4) {
-    alert('You got ' + score + '/10 correct..Good Luck next time...')
+      alert('You have ' + score + 'pts!')
+    } else if (score <= 4) {
+      alert('You have ' + score + 'pts..Good Luck next time...')
+    }
+    let tally = $('#score')
+    tally.replaceWith(score)
+    // let tally = $('#score')
+    // tally.append(score)
   }
-  }
+//Tallies up the score and delivers the correct condition.
+
+
+//Prevents enter key from submitting the form.
 const input = $('input')
 input.keypress(function (event) {
   if (event.which == 13) {
