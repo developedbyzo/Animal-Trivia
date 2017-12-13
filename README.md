@@ -1,1 +1,2 @@
-# animal_trivia.github.io
+# Animal Trivia Game
+Test your knowledge and learn something different.
