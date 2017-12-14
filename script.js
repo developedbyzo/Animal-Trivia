@@ -23,7 +23,7 @@ reset.on('click', function () {
 // function firstQ () {
   function questionAns () {
     let answer = $('#Q1').val()
-    if (answer === 'Back') {
+    if (answer === 'Back'|| 'back') {
       score += 2
       // event.preventDefault()
       console.log(score)
@@ -34,7 +34,7 @@ reset.on('click', function () {
 // }
 // function secondQ () {
     let answer2 = $('#Q2').val()
-    if (answer2 === 'Chow Chow') {
+    if (answer2 === 'Chow Chow' || 'chow chow' || 'Chow chow' || 'chow') {
       score += 3
       // event.preventDefault()
       console.log(score)
@@ -43,7 +43,7 @@ reset.on('click', function () {
       return false
     }
     let answer3 = $('#Q3').val()
-    if (answer3 === 'Scarlet Kingsnake') {
+    if (answer3 === 'Scarlet Kingsnake' || 'scarlet kingsnake' || 'scarlet' || 'kingsnake') {
       score += 5
       // event.preventDefault()
       console.log(score)
@@ -52,7 +52,7 @@ reset.on('click', function () {
       return false
     }
     let answer4 = $('#Q4').val()
-    if (answer4 === 'Clear') {
+    if (answer4 === 'Clear' || 'clear') {
       score += 5
       // event.preventDefault()
       console.log(score)
@@ -61,7 +61,7 @@ reset.on('click', function () {
       return false
     }
     let answer5 = $('#Q5').val()
-    if (answer5 === 'Dolphins') {
+    if (answer5 === 'Dolphins' || 'Dolphin' || 'dolphins' || 'dolphin') {
       score += 5
       // event.preventDefault()
       console.log(score)
@@ -74,11 +74,11 @@ reset.on('click', function () {
     if (score >= 20) {
       victor.play()
       alert('You have ' + score + ' pts!')
-      alert('Answers: 1)Back, 2)Chow Chow, 3)Scarlet Kingsnake, 4)Clear, 5)Dolphins')
+      alert('Answers: 1)Back- Depending on the species, a fish may have one or two dorsal fins., 2)Chow Chow- The Chow is one of the few ancient dog breeds still in existence., 3)Scarlet Kingsnake- The scarlet kingsnake is a red snake with black and yellow rings. It looks almost exactly like the coral snake, which is very poisonous., 4)Clear- The fur appears white because the clear follicles scatter light., 5)Dolphins- They allow only one side to sleep so that they can still breathe and swim.')
     } else if (score <= 5) {
       gOver.play()
       alert('You have ' + score + 'pts..Good Luck next time...')
-      alert('Answers: 1)Back, 2)Chow Chow, 3)Scarlet Kingsnake, 4)Clear, 5)Dolphins')
+      alert('Answers: 1)Back- Depending on the species, a fish may have one or two dorsal fins., 2)Chow Chow- The Chow is one of the few ancient dog breeds still in existence., 3)Scarlet Kingsnake- The scarlet kingsnake is a red snake with black and yellow rings. It looks almost exactly like the coral snake, which is very poisonous., 4)Clear- The fur appears white because the clear follicles scatter light., 5)Dolphins- They allow only one side to sleep so that they can still breathe and swim.')
     }
     let tally = $('#score')
     tally.replaceWith(score)
