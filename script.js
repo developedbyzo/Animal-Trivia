@@ -73,10 +73,12 @@ reset.on('click', function () {
     let gOver = new Audio('GameOver.mp3')
     if (score >= 20) {
       victor.play()
-      alert('You have ' + score + 'pts!')
+      alert('You have ' + score + ' pts!')
+      alert('Answers: 1)Back, 2)Chow Chow, 3)Scarlet Kingsnake, 4)Clear, 5)Dolphins')
     } else if (score <= 5) {
       gOver.play()
       alert('You have ' + score + 'pts..Good Luck next time...')
+      alert('Answers: 1)Back, 2)Chow Chow, 3)Scarlet Kingsnake, 4)Clear, 5)Dolphins')
     }
     let tally = $('#score')
     tally.replaceWith(score)
