@@ -23,7 +23,7 @@ reset.on('click', function () {
 // function firstQ () {
   function questionAns () {
     let answer = $('#Q1').val()
-    if (answer === 'Back'|| 'back') {
+    if (answer === 'Back') {
       score += 2
       // event.preventDefault()
       console.log(score)
@@ -34,7 +34,7 @@ reset.on('click', function () {
 // }
 // function secondQ () {
     let answer2 = $('#Q2').val()
-    if (answer2 === 'Chow Chow' || 'chow chow' || 'Chow chow' || 'chow') {
+    if (answer2 === 'Chow Chow') {
       score += 3
       // event.preventDefault()
       console.log(score)
@@ -43,7 +43,7 @@ reset.on('click', function () {
       return false
     }
     let answer3 = $('#Q3').val()
-    if (answer3 === 'Scarlet Kingsnake' || 'scarlet kingsnake' || 'scarlet' || 'kingsnake') {
+    if (answer3 === 'Scarlet Kingsnake') {
       score += 5
       // event.preventDefault()
       console.log(score)
@@ -52,7 +52,7 @@ reset.on('click', function () {
       return false
     }
     let answer4 = $('#Q4').val()
-    if (answer4 === 'Clear' || 'clear') {
+    if (answer4 === 'Clear') {
       score += 5
       // event.preventDefault()
       console.log(score)
@@ -61,7 +61,7 @@ reset.on('click', function () {
       return false
     }
     let answer5 = $('#Q5').val()
-    if (answer5 === 'Dolphins' || 'Dolphin' || 'dolphins' || 'dolphin') {
+    if (answer5 === 'Dolphins') {
       score += 5
       // event.preventDefault()
       console.log(score)
