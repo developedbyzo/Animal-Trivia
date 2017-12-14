@@ -24,7 +24,7 @@ reset.on('click', function () {
   function questionAns () {
     let answer = $('#Q1').val()
     if (answer === 'Back') {
-      score += 1
+      score += 2
       // event.preventDefault()
       console.log(score)
     } else if (answer === '') {
@@ -35,7 +35,7 @@ reset.on('click', function () {
 // function secondQ () {
     let answer2 = $('#Q2').val()
     if (answer2 === 'Chow Chow') {
-      score += 1
+      score += 3
       // event.preventDefault()
       console.log(score)
     } else if (answer === '') {
@@ -44,7 +44,7 @@ reset.on('click', function () {
     }
     let answer3 = $('#Q3').val()
     if (answer3 === 'Scarlet Kingsnake') {
-      score += 1
+      score += 5
       // event.preventDefault()
       console.log(score)
     } else if (answer === '') {
@@ -53,7 +53,7 @@ reset.on('click', function () {
     }
     let answer4 = $('#Q4').val()
     if (answer4 === 'Clear') {
-      score += 1
+      score += 5
       // event.preventDefault()
       console.log(score)
     } else if (answer === '') {
@@ -62,16 +62,20 @@ reset.on('click', function () {
     }
     let answer5 = $('#Q5').val()
     if (answer5 === 'Dolphins') {
-      score += 1
+      score += 5
       // event.preventDefault()
       console.log(score)
     } else if (answer === '') {
       alert('Please enter an answer.')
       return false
     }
-    if (score >= 5) {
+    let victor = new Audio('Eye_Of_The_Tiger_Instrumental.mp3')
+    let gOver = new Audio('GameOver.mp3')
+    if (score >= 20) {
+      victor.play()
       alert('You have ' + score + 'pts!')
-    } else if (score <= 2) {
+    } else if (score <= 5) {
+      gOver.play()
       alert('You have ' + score + 'pts..Good Luck next time...')
     }
     let tally = $('#score')
