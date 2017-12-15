@@ -13,13 +13,13 @@ Did you deliver a project that met all the technical requirements? Given what th
 
 ## Code Quality:
 
-### 1: Performing
+### 1: Progressing
 
 Did you follow code style guidance and best practices covered in class, such as spacing, modularity, and semantic naming? Did you comment your code?
 
 ## Creativity/Interface:
 
-### 2: Excelling
+### 2: Performing
 
 Is your user interface easy to use and understand? Does it make sense for the problem you're solving? Does your interface demonstrate creative design?
 
