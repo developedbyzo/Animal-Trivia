@@ -30,3 +30,14 @@ Notes:
 * Remove unused code from production apps
 * Work on making your code more DRY using functions!
 * Remove extra files not being used -- this is what Git is for! Tracking changes so that you can go back to a previous version of the code. No need for new files!
+
+## Things you'd like specific feedback on: 
+
+**How could I have designed the button so it would not accept any further submission?**
+
+I would add the disabled property to it using JQuery after clicking it, like this:
+```js
+$('#btnSubmit').on('click', () => {
+    $(this).prop("disabled",true)
+})
+```
