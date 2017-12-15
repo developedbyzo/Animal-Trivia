@@ -1,12 +1,15 @@
+/* Great job with the CSS! Make sure your spacing is consistent! */
 html, body {
   margin: 0;
   padding: 0;
 }
+
 body {
   background-image: url("http://www.mulierchile.com/animal-background-wallpaper/animal-background-wallpaper-014.jpg");
   background-size: cover;
   
 }
+
 h1, h3, p {
   text-align: center;
   font-family: 'Nunito', sans-serif;
@@ -19,20 +22,22 @@ ul {
   color: white;
   list-style: none;
 }
+
 div {
   float: left;
   text-align: center;
 }
+
 .header1 {
   height: 759px;
-  
 }
+
 .container {
   background-color: black;
   height: auto;
   width: 600px;
 }
+
 .header2 {
   height: 759px;
-  
 }
