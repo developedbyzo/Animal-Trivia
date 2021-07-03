@@ -1,11 +1,10 @@
 let score = 0
+// AS: This for loop will never run since score will always be 0 and i is 0
 for (i = 0; i < score; i++) {
   score += 1
 }
-// function showScores() {
-//   $('#score').append(score);
-// }
 
+// AS: Remove dead code in production
 const button = $('#btnSubmit')
 button.on('click', questionAns)
 
@@ -14,85 +13,46 @@ reset.on('click', function () {
   document.location.reload()
 })
 
-//Resets the form
-// function resetForm () {
-//   ('#triviaForm').reset()
-//   return true
-// }
-
-// function firstQ () {
-  function questionAns () {
-    let answer = $('#Q1').val()
-    if (answer === 'Back') {
-      score += 2
-      // event.preventDefault()
-      console.log(score)
-    } else if (answer === '') {
-      alert('Please enter an answer.')
-      return false
-    }
-// }
-// function secondQ () {
-    let answer2 = $('#Q2').val()
-    if (answer2 === 'Chow Chow') {
-      score += 3
-      // event.preventDefault()
-      console.log(score)
-    } else if (answer === '') {
-      alert('Please enter an answer.')
-      return false
-    }
-    let answer3 = $('#Q3').val()
-    if (answer3 === 'Scarlet Kingsnake') {
-      score += 5
-      // event.preventDefault()
-      console.log(score)
-    } else if (answer === '') {
-      alert('Please enter an answer.')
-      return false
-    }
-    let answer4 = $('#Q4').val()
-    if (answer4 === 'Clear') {
-      score += 5
-      // event.preventDefault()
-      console.log(score)
-    } else if (answer === '') {
-      alert('Please enter an answer.')
-      return false
-    }
-    let answer5 = $('#Q5').val()
-    if (answer5 === 'Dolphins') {
-      score += 5
-      // event.preventDefault()
-      console.log(score)
-    } else if (answer === '') {
-      alert('Please enter an answer.')
-      return false
-    }
-    let victor = new Audio('Eye_Of_The_Tiger_Instrumental.mp3')
-    let gOver = new Audio('GameOver.mp3')
-    if (score >= 20) {
-      victor.play()
-      alert('You have ' + score + ' pts!')
-      alert('Answers: 1)Back- Depending on the species, a fish may have one or two dorsal fins., 2)Chow Chow- The Chow is one of the few ancient dog breeds still in existence., 3)Scarlet Kingsnake- The scarlet kingsnake is a red snake with black and yellow rings. It looks almost exactly like the coral snake, which is very poisonous., 4)Clear- The fur appears white because the clear follicles scatter light., 5)Dolphins- They allow only one side to sleep so that they can still breathe and swim.')
-    } else if (score <= 5) {
-      gOver.play()
-      alert('You have ' + score + 'pts..Good Luck next time...')
-      alert('Answers: 1)Back- Depending on the species, a fish may have one or two dorsal fins., 2)Chow Chow- The Chow is one of the few ancient dog breeds still in existence., 3)Scarlet Kingsnake- The scarlet kingsnake is a red snake with black and yellow rings. It looks almost exactly like the coral snake, which is very poisonous., 4)Clear- The fur appears white because the clear follicles scatter light., 5)Dolphins- They allow only one side to sleep so that they can still breathe and swim.')
-    }
-    let tally = $('#score')
-    tally.replaceWith(score)
-    // let tally = $('#score')
-    // tally.append(score)
+function answerQuestion (id, correctAnswer, newScore) {
+  let answer = $(id).val()
+  if (correctAnswer === correctAnswer) {
+    score += newScore
+  } else if (answer === '') {
+    alert('Please enter an answer.')
   }
-//Tallies up the score and delivers the correct condition.
+}
 
+function questionAns () {
+  // AS: You could make your code more DRY by doing something like this:
+  answerQuestion('Q1', 'Back', 2)
+  answerQuestion('Q2', 'Chow Chow', 3)
+  answerQuestion('Q3', 'Scarlet Kingsnake', 5)
+  answerQuestion('Q4', 'Clear', 5)
+  answerQuestion('Q5', 'Dolphins', 5)
 
-//Prevents enter key from submitting the form.
+  // AS: I would use const here since they won't change!
+  const victor = new Audio('Eye_Of_The_Tiger_Instrumental.mp3')
+  const gOver = new Audio('GameOver.mp3')
+
+  // AS: this is really cool!
+  if (score >= 20) {
+    victor.play()
+    alert('You have ' + score + ' pts!')
+  } else if (score <= 5) {
+    gOver.play()
+    alert('You have ' + score + 'pts..Good Luck next time...')
+  }
+  // AS: Since this happens no matter what, it should be out of the if statement
+  alert('Answers: 1)Back- Depending on the species, a fish may have one or two dorsal fins., 2)Chow Chow- The Chow is one of the few ancient dog breeds still in existence., 3)Scarlet Kingsnake- The scarlet kingsnake is a red snake with black and yellow rings. It looks almost exactly like the coral snake, which is very poisonous., 4)Clear- The fur appears white because the clear follicles scatter light., 5)Dolphins- They allow only one side to sleep so that they can still breathe and swim.')
+  
+  let tally = $('#score')
+  tally.replaceWith(score)
+}
+
+// Prevents enter key from submitting the form.
 const input = $('input')
 input.keypress(function (event) {
   if (event.which == 13) {
     event.preventDefault()
   }
 })
-

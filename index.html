@@ -9,7 +9,9 @@
   <title>Animal Trivia - Fun Game For All Ages -</title>
 </head>
 <body>
+  <!-- AS: Make sure that your indentation is consistent here! -->
   <header>
+    <!-- AS: Make sure to remove code that's not being used -->
     <nav>
       <!-- <a href="mosesa0609.github.io">&#8592;</a> -->
     </nav>
@@ -20,66 +22,68 @@
       </div>
       <div id="background">
         <div class="container">
-            <form id="triviaForm">
-              <h1>Animal Trivia</h1>
-              <h3>- Test Your Knowlege -</h3>
-                <p id="firstQ">Where on a fish would you find its dorsal fin?</p> 
-                <ul>
-                  <li>Choose from the following:</li>
-                  <li>Stomach</li>
-                  <li>Head</li>
-                  <li>Back</li>
-                  <li>Tail</li>
-                </ul>
-                <input type="text" name="answer" id="Q1"/>
-                <br>
-                <p id="secondQ">Originating in northern China, this dog breed is known for its unique blue-black tongue and thick coat of fur.</p> 
-                <ul>
-                  <li>Choose from the following:</li>
-                  <li>Pekingese</li>
-                  <li>Shih Tzu</li>
-                  <li>Shar Pei</li>
-                  <li>Chow Chow</li>
-                </ul>
-                <input type="text" name="answer" id="Q2"/>
-                <br>
-                <p id="thridQ">Which of the following is NOT poisonous?</p> 
-                <ul>
-                  <li>Choose from the following:</li>
-                  <li>Scarlet Kingsnake</li>
-                  <li>Marbled</li>
-                  <li>Cone Snail</li>
-                  <li>Death Stalker Scorpion</li>
-                </ul>
-                <input type="text" name="answer" id="Q3"/>
-                <br>
-                <p id="fourQ">What color is a polar bear's fur?</p> 
-                <ul>
-                  <li>Choose from the following:</li>
-                  <li>Yellow</li>
-                  <li>Clear</li>
-                  <li>Cream</li>
-                  <li>White</li>
-                </ul>
-                <input type="text" name="answer" id="Q4"/>
-                <br>
-                <p id="fiveQ">Which of these animals allows only one side of the brain to sleep at a time?</p> 
-                <ul>
-                  <li>Choose from the following:</li>
-                  <li>Dogs</li>
-                  <li>Bears</li>
-                  <li>Dolphins</li>
-                  <li>Elephants</li>
-                </ul>
-                <input type="text" name="answer" id="Q5"/>
-                <br>
-                <br>
-                <input id="btnSubmit" type="button" value="Submit"/>
-                <input id="btnReset" type="reset" value="Reset"/>
-                <p>Score: <span id="score"></span></p>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-                <script src="script.js"></script>
-              </form>
+          <!-- AS: ids and classes should be kebab-case instead of camelCase -->
+          <form id="triviaForm">
+            <h1>Animal Trivia</h1>
+            <h3>- Test Your Knowlege -</h3>
+              <p id="firstQ">Where on a fish would you find its dorsal fin?</p> 
+              <ul>
+                <li>Choose from the following:</li>
+                <li>Stomach</li>
+                <li>Head</li>
+                <li>Back</li>
+                <li>Tail</li>
+              </ul>
+              <input type="text" name="answer" id="Q1"/>
+              <!-- AS: instead of using BR tags, use css to add spacing -->
+              <br>
+              <p id="secondQ">Originating in northern China, this dog breed is known for its unique blue-black tongue and thick coat of fur.</p> 
+              <ul>
+                <li>Choose from the following:</li>
+                <li>Pekingese</li>
+                <li>Shih Tzu</li>
+                <li>Shar Pei</li>
+                <li>Chow Chow</li>
+              </ul>
+              <input type="text" name="answer" id="Q2"/>
+              <br>
+              <p id="thridQ">Which of the following is NOT poisonous?</p> 
+              <ul>
+                <li>Choose from the following:</li>
+                <li>Scarlet Kingsnake</li>
+                <li>Marbled</li>
+                <li>Cone Snail</li>
+                <li>Death Stalker Scorpion</li>
+              </ul>
+              <input type="text" name="answer" id="Q3"/>
+              <br>
+              <p id="fourQ">What color is a polar bear's fur?</p> 
+              <ul>
+                <li>Choose from the following:</li>
+                <li>Yellow</li>
+                <li>Clear</li>
+                <li>Cream</li>
+                <li>White</li>
+              </ul>
+              <input type="text" name="answer" id="Q4"/>
+              <br>
+              <p id="fiveQ">Which of these animals allows only one side of the brain to sleep at a time?</p> 
+              <ul>
+                <li>Choose from the following:</li>
+                <li>Dogs</li>
+                <li>Bears</li>
+                <li>Dolphins</li>
+                <li>Elephants</li>
+              </ul>
+              <input type="text" name="answer" id="Q5"/>
+              <br>
+              <br>
+              <input id="btnSubmit" type="button" value="Submit"/>
+              <input id="btnReset" type="reset" value="Reset"/>
+              <p>Score: <span id="score"></span></p>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+              <script src="script.js"></script>
+            </form>
         </div>
       </div>
       <div>
